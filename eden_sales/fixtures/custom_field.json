@@ -538,7 +538,8 @@
   "search_index": 0, 
   "unique": 0, 
   "width": null
- },{
+ },
+ {
   "allow_on_submit": 0, 
   "collapsible": 0, 
   "collapsible_depends_on": null, 
@@ -573,7 +574,8 @@
   "search_index": 0, 
   "unique": 0, 
   "width": null
- },{
+ },
+ {
   "allow_on_submit": 0, 
   "collapsible": 0, 
   "collapsible_depends_on": null, 
@@ -618,7 +620,7 @@
   "description": null, 
   "docstatus": 0, 
   "doctype": "Custom Field", 
-  "dt": "Purchase Invoice", 
+  "dt": "Sales Invoice", 
   "fieldname": "co_abbr", 
   "fieldtype": "Data", 
   "hidden": 1, 
