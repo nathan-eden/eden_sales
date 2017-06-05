@@ -44,6 +44,7 @@ def make_sales_order(source_name, for_company, target_doc=None):
 				"contact_person",
 				"customer",
 				"customer_name",
+				"currency",
 			],
 			"validation": {
 				"docstatus": ["=", 1]
@@ -59,7 +60,8 @@ def make_sales_order(source_name, for_company, target_doc=None):
 			"field_no_map": [
 				"warehouse",
 				"rate",
-				"price_list_rate"
+				"price_list_rate",
+				"delivered_by_supplier"
 			],
 			"postprocess": update_item,
 		}
