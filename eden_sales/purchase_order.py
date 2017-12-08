@@ -68,16 +68,21 @@ def make_sales_order(source_name, for_company, target_doc=None):
 	}, target_doc, set_missing_values)
 
         #sbtang changes start
-        if for_company in "Eden Ministry Myanmar":
-           doclist.get("items")[0].warehouse = "Finished Goods - MY"
+	targetWarehouse = None
+	if for_company in "Eden Ministry Myanmar":
+            targetWarehouse = "Finished Goods - MY"
         if for_company in "Tian Yuan KM":
-           doclist.get("items")[0].warehouse = "Finished Goods - KM"
+            targetWarehouse = "Finished Goods - KM"
         if for_company in "Tian Yuan SH":
-           doclist.get("items")[0].warehouse = "Finished Goods - SH"
-	if for_company in "Eden Ministry Australia":
-	   doclist.get("items")[0].warehouse = "Finished Goods - AU"
-        #sbtang changes end
+            targetWarehouse = "Finsihed Goods - SH"
+        if for_company in "Eden Ministry Australia":
+            targetWarehouse = "Finished Goods - AU"
 
+        for item in doclist.get("items") :
+            if targetWarehouse != None:
+         	item.warehouse = targetWarehouse
+
+	#sbtang changes end
 	doclist.insert(ignore_permissions=True)
 	frappe.db.commit()
 
