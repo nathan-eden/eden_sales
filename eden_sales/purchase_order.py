@@ -73,7 +73,7 @@ def make_sales_order(source_name, for_company, target_doc=None):
         if for_company in "Tian Yuan KM":
            doclist.get("items")[0].warehouse = "Finished Goods - KM"
         if for_company in "Tian Yuan SH":
-           doclist.get("items")[0].warehouse = "Finsihed Goods - SH"
+           doclist.get("items")[0].warehouse = "Finished Goods - SH"
 	if for_company in "Eden Ministry Australia":
 	   doclist.get("items")[0].warehouse = "Finished Goods - AU"
         #sbtang changes end
