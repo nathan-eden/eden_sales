@@ -16,8 +16,8 @@ def send_to_company(name):
 		frappe.throw("No linked Sales Order found")
 
 	so = frappe.get_doc("Sales Order", from_so)
-	if not so.dropship_order or not so.po_no:
-		frappe.throw("Linked Sales Order {0} must be dropship type to use this feature".format(so.name))
+#	if not so.dropship_order or not so.po_no:
+#		frappe.throw("Linked Sales Order {0} must be dropship type to use this feature".format(so.name))
 
 	po = frappe.get_doc("Purchase Order", doc.po_no)
 
