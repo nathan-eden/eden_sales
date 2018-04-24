@@ -7,7 +7,7 @@ from frappe.utils.data import flt
 @frappe.whitelist()
 def send_to_company(name):
 	doc = frappe.get_doc("Delivery Note", name)
-	if not doc.dropship_order or not doc.po_no:
+	if not doc.po_no:
 		frappe.throw("Delivery Note must be dropship type")
 
 	from_so = next(d.against_sales_order for d in doc.items if d.against_sales_order)
