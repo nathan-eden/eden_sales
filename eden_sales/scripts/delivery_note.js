@@ -2,7 +2,7 @@ frappe.provide('eden_sales.dn');
 
 frappe.ui.form.on("Delivery Note", {
     refresh: function (frm) {
-        if (frm.doc.docstatus === 1 && frm.doc.dropship_order && frm.doc.po_no) {
+        if (frm.doc.docstatus === 1 && frm.doc.po_no) {
             frm.add_custom_button(__('Mark delivery to Company'), function () {
                 frappe.call({
                     type: "GET",
